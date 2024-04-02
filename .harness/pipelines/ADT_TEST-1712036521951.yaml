@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_Boitai_ADT_TEST_1712036528923
+  name: Build ADT_TEST
+  orgIdentifier: default
+  projectIdentifier: GITHUB_EXECUTE
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: Boitai/ADT_TEST
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
