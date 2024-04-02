@@ -25,18 +25,6 @@ pipeline:
                   timeout: ""
                   type: Run
               - step:
-                  type: GitClone
-                  name: GitClone_1
-                  identifier: GitClone_1
-                  spec:
-                    connectorRef: account.Github
-                    repoName: Boitai/ADT_TEST
-                    build:
-                      type: branch
-                      spec:
-                        branch: main
-                  description: wecome message execution
-              - step:
                   type: Run
                   name: Run_2
                   identifier: Run_2
@@ -45,6 +33,7 @@ pipeline:
                     command: |-
                       ls -la
                       sh WELCOME_SCRIPT.sh
+                      ls
           platform:
             os: Linux
             arch: Amd64
