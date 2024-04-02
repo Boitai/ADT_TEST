@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Boitai_ADT_TEST_1712036528923-pr-trigger-input-set
+  identifier: Build_Boitai_ADT_TEST_1712036528923prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: GITHUB_EXECUTE
+  pipeline:
+    identifier: Build_Boitai_ADT_TEST_1712036528923
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
